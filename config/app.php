@@ -2,6 +2,10 @@
 
 return [
 
+    'app_name' => 'Magistra',
+    'slogan'   => 'Democratizing Education',
+    'keywords' => 'teacher, student, p2p, education, on-demand, ondemand, lessons',
+    'author'   => 'Stdio BS',
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

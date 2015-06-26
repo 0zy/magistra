@@ -1,0 +1,199 @@
+/*=======================
+Theme: MobyApp Mobile Application Template
+Author: JLP Media
+This is The Responsive Style
+Email: jennpereira13@gmail.com / lianplameras@gmail.com
+Version: 1.0
+Date Created: September 5, 2014
+=======================*/
+@media (max-width: 992px) { 
+    h1 {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+        font-weight: 200;
+    }
+    p {
+        font-size: .9rem;
+        line-height: 1.425em;
+    }
+    .space {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 860px) { 
+    h1 {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        font-weight: 200;
+    }
+    p {
+        font-size: .8rem;
+        line-height: 1.325em;
+    }
+    .space {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .review h1 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    section.bigtriangle-bg {
+        padding: 30px;
+        height: 30rem;
+    }
+    .panel-body {
+        font-size: 0.75rem;
+        line-height: 1.0rem;
+    }
+    #download a.btn.btn-download { padding: 10px 10px }
+    #screenshots {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        text-align: center;
+    }
+    #footer .social-icons .space {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+@media (min-width: 780px) { 
+    .navbar-default {
+        padding: 15px 0;
+        border: 0;
+        background-color: rgba(0, 0, 0, 1);
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    .navbar-default .navbar-nav>.active>a { border-radius: 0px }
+}
+@media (max-width:766px) { 
+    h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 200;
+    }
+    #home { text-align: center }
+    .padding-left {
+        padding-left: 0;
+        margin: 0 10px;
+    }
+    .pull-right { padding-top: 20px }
+    h2 { font-size: 2rem }
+    p {
+        font-size: 0.9rem;
+        line-height: 1.325em;
+    }
+    #overview {
+        max-height: 170rem;
+        padding-top: 3.5rem;
+        text-align: center;
+    }
+    .content-left,
+    .content-right { text-align: center }
+    .center img { margin: 0 auto }
+    .about-content { text-align: center }
+    #screenshots { text-align: center }
+    #download { text-align: center }
+    section#contact .form-group input,
+    section#contact .form-group textarea { padding: 10px }
+    #footer .social-icons .space {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+@media (max-width:460px) { 
+    section.bigtriangle-bg { 
+        height: 36rem; 
+    }
+}
+@media (max-width:360px) { 
+    #home { padding-top: 80px }
+    h1 { font-size: 1.75rem }
+    h2 { font-size: 1.5rem }
+    a.btn { margin: 0 5px 0 0 }
+    .btn-learn,
+    .btn-download { padding: 10px 20px }
+    #features {
+        padding-top: 2.5rem;
+        padding-bottom: 3.5rem;
+    }
+    .review h1 {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+    }
+    h4 { font-size: 0.8rem }
+    section.bigtriangle-bg { padding: 10px }
+    #overview { padding-top: 2.5rem }
+    .content-right { padding-bottom: 2.5rem }
+    #download { padding-top: 2rem }
+    p {
+        font-size: 0.8rem;
+        line-height: 1.425em;
+    }
+    #screenshots { padding-top: 1.5rem }
+    #subscribe {
+        padding-top: 1.4rem;
+        padding-bottom: 2.5rem;
+    }
+    #contact {
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+    }
+    i.fa.fa-2x {
+        padding: 0 2px;
+        font-size: 20px;
+    }
+    #footer p { font-size: 12px }
+}
+@media (max-width:320px) { 
+    h1 { font-size: 1.5rem }
+    h2 { font-size: 1.2rem }
+    a.btn { margin: 0 2px 0 0 }
+    .btn-learn,
+    .btn-download { padding: 5px 15px }
+    #features {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .review h1 {
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+        font-weight: 400;
+    }
+    h4 { font-size: 0.75rem }
+    section.bigtriangle-bg { 
+        padding: 10px;
+        height: 34rem; 
+    }
+    #overview { padding-top: 1.5rem }
+    .content-right { padding-bottom: 1.5rem }
+    #download { padding-top: 1rem }
+    p {
+        font-size: 0.60rem;
+        line-height: 1.425em;
+    }
+    #screenshots { padding-top: 1.5rem }
+    #subscribe {
+        padding-top: 1.4rem;
+        padding-bottom: 2.5rem;
+    }
+    #contact {
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+    }
+    i.fa.fa-2x {
+        padding: 0 2px;
+        font-size: 20px;
+    }
+    #footer p { font-size: 12px }
+}
