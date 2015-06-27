@@ -7,7 +7,8 @@ from subprocess import call
 mappings = {
             "prod"      : "magistra-prod",
             "staging"   : "magistra-staging",
-            "dev1"      : "magistra"
+            "dev1"      : "magistra",
+            "local"     : ""
             }
 class bcolors:
     HEADER = '\033[95m'
@@ -32,7 +33,7 @@ def main():
 
     orig_file = ".env"
     env_file = ".env." + env
-    backup_file = ".env.backup." + str(datetime.datetime.now().strftime("%A_%d_%B_%Y_%I_%M_%p"))
+    backup_file = ".env_backups/.env.backup." + str(datetime.datetime.now().strftime("%A_%d_%B_%Y_%I_%M_%p"))
     cprint("Env File: " + env_file, bcolors.OKBLUE)
     if check_diff(env_file):
         cprint( "Backup File: " + backup_file, bcolors.OKBLUE)
@@ -44,9 +45,13 @@ def main():
     if not mappings.has_key(env):
         print "create heroku"
 
-    call(["build/try.sh"])
-    call(["git", "reset", "HEAD" , backup_file])
-    call(["git", "reset", "HEAD" , orig_file])
+    call(["gulp"])
+    if env == "local":
+        call(["php", "-S", "localhost:8000", "-t", "public/"])
+    else:
+        call(["build/try.sh"])
+        call(["git", "reset", "HEAD" , backup_file])
+        call(["git", "reset", "HEAD" , orig_file])
     #scale dyno
 
 def check_diff(env_file):

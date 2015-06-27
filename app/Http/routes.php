@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('login/{provider?}', 'Auth\AuthController@login');
+
+Route::get('/dashboard', function() {
+    if(Auth::check()) return 'Welcome back, ' . Auth::user()->first_name;
+});
