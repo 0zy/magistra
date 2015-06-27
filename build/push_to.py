@@ -32,9 +32,9 @@ def main():
 
     orig_file = ".env"
     env_file = ".env." + env
+    backup_file = ".env.backup." + str(datetime.datetime.now().strftime("%A_%d_%B_%Y_%I_%M_%p"))
     cprint("Env File: " + env_file, bcolors.OKBLUE)
     if check_diff(env_file):
-        backup_file = ".env.backup." + str(datetime.datetime.now().strftime("%A_%d_%B_%Y_%I_%M_%p"))
         cprint( "Backup File: " + backup_file, bcolors.OKBLUE)
         call(["cp", orig_file, backup_file])
         call(["cp", env_file, orig_file])
@@ -45,6 +45,7 @@ def main():
         print "create heroku"
 
     call(["build/try.sh"])
+    call(["git", "reset", "HEAD" , backup_file])
     #scale dyno
 
 def check_diff(env_file):
