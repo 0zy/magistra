@@ -4,7 +4,8 @@
 
 set -e
 
-git ci . -m 'Heroku temporary commit'
+git add . 
+git commit -m 'Heroku temporary commit'
 git push heroku master --force
 
 echo
