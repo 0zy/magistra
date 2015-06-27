@@ -46,6 +46,7 @@ def main():
 
     call(["build/try.sh"])
     call(["git", "reset", "HEAD" , backup_file])
+    call(["git", "reset", "HEAD" , orig_file])
     #scale dyno
 
 def check_diff(env_file):
