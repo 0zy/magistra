@@ -39,6 +39,7 @@ class AuthenticateUser
 
     private function getSocialUser($provider)
     {
-        return $this->socialite->driver($provider)->user();
+        $user = $this->socialite->driver($provider)->user();
+        return $user;
     }
 }

@@ -17,6 +17,7 @@ class UserRepository
                 'first_name' => $first,
                 'last_name' => $last,
                 'email' => $userData->email,
+                'avatar' => $userData->avatar,
                 'is_admin' => 0,
                 'is_teacher' => 0,
                 'latitude' => "",
@@ -37,17 +38,20 @@ class UserRepository
             'email' => $userData->email,
             'first_name' => $first,
             'last_name' => $last,
+            'avatar' => $userData->avatar
         ];
         $dbData = [
             'email' => $user->email,
             'first_name' => $user->first_name,
             'last_name' => $user->last_name,
+            'avatar' => $user->avatar
         ];
 
         if (!empty(array_diff($socialData, $dbData))) {
             $user->email = $userData->email;
             $user->first_name = $first;
             $user->last_name = $last;
+            $user->avatar = $userData->avatar;
         }
         $user->last_login_at = Carbon::now();
         $user->save();

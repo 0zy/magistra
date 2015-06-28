@@ -24,3 +24,7 @@ Route::get('/home', function() {
 
 Route::get('/login', 'Auth\LoginController@showOptions');
 Route::get('/login/{provider?}', 'Auth\AuthController@login');
+Route::get('/logout', function(){
+    Auth::logout();
+    return "Logged out";
+});
