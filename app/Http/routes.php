@@ -15,8 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login/{provider?}', 'Auth\AuthController@login');
 
-Route::get('/dashboard', function() {
+Route::get('/home', function() {
     if(Auth::check()) return 'Welcome back, ' . Auth::user()->first_name;
+
+    return redirect('/login');
 });
+
+Route::get('/login', 'Auth\LoginController@showOptions');
+Route::get('/login/{provider?}', 'Auth\AuthController@login');

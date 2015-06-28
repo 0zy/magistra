@@ -1,13 +1,37 @@
 @extends('header')
 
-@section('content')
-
-    <!--
-    <div class="content">
-        <div class="title">Laravel 5</div>
-        <div class="quote">{{ Inspiring::quote() }}</div>
+@section('preloader')
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
     </div>
-    -->
+@stop
+@section('navbar')
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobyapp">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="img/NCIPE_logo_mobile_0.png" alt=""></a> <!-- Your logo here -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="mobyapp">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="page-scroll" href="#home">Home</a></li>
+                    <li><a class="page-scroll" href="#features">Features</a></li>
+                    <li><a class="page-scroll" href="#overview">Overview</a></li>
+                    <li><a class="page-scroll" href="#screenshots">Shots</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+@stop
+@section('content')
     <section id="home">
         <div class="container">
             <div class="row"> <!-- Start row -->
@@ -220,5 +244,11 @@
         </div> <!-- End container -->
         <div class="clearfix"></div>
     </section>
+@stop
+
+@section('mobyjs')
+    <!-- MobyApp Custom Scripts
+       ================================================== -->
+    <script src="js/vendor/moby/main.js"></script>
 @stop
 

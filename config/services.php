@@ -39,6 +39,12 @@ return [
         'client_id' => getenv('GITHUB_CLIENT_ID'),
         'client_secret' => getenv('GITHUB_CLIENT_SECRET'),
         'redirect'      => getenv('GITHUB_REDIRECT_URI')
+    ],
+
+    'facebook' => [
+        'client_id' => getenv('FACEBOOK_CLIENT_ID'),
+        'client_secret' => getenv('FACEBOOK_CLIENT_SECRET'),
+        'redirect'      => getenv('FACEBOOK_REDIRECT_URI')
     ]
 
 ];

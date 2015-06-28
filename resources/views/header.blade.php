@@ -30,33 +30,8 @@
 
     <script type="text/javascript" src="js/vendor/bootstrap/modernizr.custom.js"></script>
     <body>
-        <div id="preloader">
-            <div id="status">&nbsp;</div>
-        </div>
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobyapp">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/NCIPE_logo_mobile_0.png" alt=""></a> <!-- Your logo here -->
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="mobyapp">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="#home">Home</a></li>
-                        <li><a class="page-scroll" href="#features">Features</a></li>
-                        <li><a class="page-scroll" href="#overview">Overview</a></li>
-                        <li><a class="page-scroll" href="#screenshots">Shots</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
+        @yield('preloader')
+        @yield('navbar')
         @yield('content')
 
     <!-- javascript -->
@@ -94,9 +69,7 @@
         <script type="text/javascript" src="js/vendor/bootstrap/contact.js"></script>
         <script type="text/javascript" src="js/vendor/bootstrap/jquery.ajaxchimp.js"></script>
 
-        <!-- MobyApp Custom Scripts
-        ================================================== -->
-        <script src="js/vendor/moby/main.js"></script>
+        @yield('mobyjs')
     </body>
 
 </html>

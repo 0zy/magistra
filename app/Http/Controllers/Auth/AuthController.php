@@ -70,6 +70,6 @@ class AuthController extends Controller
 
     public function userHasLoggedIn($user)
     {
-        return redirect('/dashboard');
+        return redirect('/home');
     }
 }

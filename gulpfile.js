@@ -20,6 +20,7 @@ elixir(function(mix) {
      */
     mix.styles([
         "vendor/bootstrap/bootstrap.css",
+        "vendor/bootstrap/bootstrap-social.css",
         "vendor/bootstrap/animate.css",
         "vendor/bootstrap/nivo-lightbox.css",
         "vendor/bootstrap/nivo_lightbox_themes/default/default.css",
