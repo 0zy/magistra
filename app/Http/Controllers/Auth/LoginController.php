@@ -16,7 +16,7 @@ class LoginController extends Controller
      */
     public function showOptions()
     {
-        //if(\Auth::check()) return redirect("/home");
+        if(\Auth::check()) return redirect("/home");
         return view("login");
     }
 

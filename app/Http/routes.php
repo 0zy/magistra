@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/home', function() {
-    if(Auth::check()) return 'Welcome back, ' . Auth::user()->first_name;
+    if(Auth::check()) return view('home');
 
     return redirect('/login');
 });

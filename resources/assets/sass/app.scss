@@ -1,2 +1,32 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+.clip-circle {
+  background-size:720px 480px;
+  background-position:-160px 0px;
+  height:480px;
+  width:480px;
+  border-radius:50%;
+  overflow:hidden;
+  margin:auto;
+}
 
+/*new specific class for box shadow*/
+.box-shad {
+  box-shadow:
+  0 0 150px 20px #000 inset;
+}
+
+.smaller {
+  /*these are the override-ers*/
+  background-size:360px 240px;
+  background-position:-80px 0px;
+  height:240px;
+  width:240px;
+  /*smaller box shadow*/
+  box-shadow:
+  0 0 60px 10px #000 inset;
+
+  /*photo filter without prefix*/
+  filter: grayscale(1) blur(1px);
+  /*photo filter with Webkit prefix; which can be omitted for the latest browser*/
+  -webkit-filter: grayscale(1) blur(1px);
+}

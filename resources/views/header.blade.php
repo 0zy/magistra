@@ -57,6 +57,7 @@
         <script type="text/javascript" src="js/vendor/bootstrap/SmoothScroll.js"></script>
         <script type="text/javascript" src="js/vendor/bootstrap/wow.min.js"></script>
         <script type="text/javascript" src="js/vendor/bootstrap/matchMedia.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap/jquery-ui-datepicker.js"></script>
         <script type="text/javascript" src="js/vendor/bootstrap/jquery.backgroundvideo.min.js"></script>
 
         <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/

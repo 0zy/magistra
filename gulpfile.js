@@ -29,6 +29,7 @@ elixir(function(mix) {
         "vendor/moby/style.css",
         "vendor/moby/responsiveness.css",
         "vendor/font-awesome-4.2.0/css/font-awesome.css",
+        "vendor/bootstrap/calendar.css",
         "app.css"
     ], null, 'public/css');
 
@@ -48,6 +49,7 @@ elixir(function(mix) {
         "vendor/bootstrap/wow.min.js",
         "vendor/bootstrap/matchMedia.js",
         "vendor/bootstrap/jquery.backgroundvideo.min.js",
+        "vendor/bootstrap/jquery-ui-datepicker.js",
         "vendor/bootstrap/jqBootstrapValidation.js",
         "vendor/bootstrap/contact.js",
         "vendor/bootstrap/jquery.ajaxchimp.js",
