@@ -1,7 +1,7 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobyapp">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -14,10 +14,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
            <div class="collapse navbar-collapse" id="mobyapp">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a class="page-scroll" href="#home">Home</a></li>
-                    <li><a class="page-scroll" href="#features">Search</a></li>
+                    <li><a class="page-scroll" href="/home">Home</a></li>
+                    <li><a class="page-scroll" href="/calendar">Calendar</a></li>
                     @if (Auth::check())
-                        <li><a class="page-scroll">
+                        <li><a class="page-scroll" href="/profile">
                                 {{ Auth::user()->first_name . " " . Auth::user()->last_name }}
                             </a>
                         </li>

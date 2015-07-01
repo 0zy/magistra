@@ -30,6 +30,15 @@ class UserRepository
         return $user;
     }
 
+    public function editUser($userData)
+    {
+        $user = User::where('email', '=', $userData["email"])->first();
+        $user->notification_opt_out = isset($userData["notification_opt_out"]) ? true : false;
+        $user->tos_accepted = isset($userData["tos_accepted"]) ? true : false;
+
+        $user->save();
+    }
+
     public function checkIfUserNeedsUpdating($userData, $user)
     {
 

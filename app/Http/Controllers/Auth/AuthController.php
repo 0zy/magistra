@@ -72,4 +72,15 @@ class AuthController extends Controller
     {
         return redirect('/home');
     }
+
+    public function store(AuthenticateUser $authenticateUser, Request $request)
+    {
+        return $authenticateUser->updateUser($request->all(), $this);
+    }
+
+    public function userDataUpdated($user)
+    {
+        \Session::flash('user_data_updated', 'true');
+        return redirect('/profile');
+    }
 }

@@ -11,6 +11,8 @@
 |
 */
 
+Route::model('user', 'User');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,9 +24,25 @@ Route::get('/home', function() {
     return redirect('/login');
 });
 
+Route::get('/calendar', function() {
+    if(Auth::check()) return view('calendar');
+
+    return redirect('/login');
+});
+
+Route::get('/profile', function() {
+    if(Auth::check()) return view('profile');
+
+    return redirect('/login');
+});
+
+Route::post('/profile/edit', 'Auth\AuthController@store');
+
 Route::get('/login', 'Auth\LoginController@showOptions');
 Route::get('/login/{provider?}', 'Auth\AuthController@login');
 Route::get('/logout', function(){
     Auth::logout();
     return "Logged out";
 });
+
+

@@ -42,4 +42,10 @@ class AuthenticateUser
         $user = $this->socialite->driver($provider)->user();
         return $user;
     }
+
+    public function updateUser($request, $listener)
+    {
+        $user = $this->users->editUser($request);
+        return $listener->userDataUpdated($user);
+    }
 }
