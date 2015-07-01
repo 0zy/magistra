@@ -70,7 +70,10 @@ class AuthController extends Controller
 
     public function userHasLoggedIn($user)
     {
-        return redirect('/home');
+        if($user->tos_accepted)
+            return redirect('/home');
+        else
+            return redirect('/profile/');
     }
 
     public function store(AuthenticateUser $authenticateUser, Request $request)

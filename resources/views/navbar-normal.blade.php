@@ -16,6 +16,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="page-scroll" href="/home">Home</a></li>
                     <li><a class="page-scroll" href="/calendar">Calendar</a></li>
+                    @if (Auth::check() && Auth::user()->is_teacher)
+                        <li><a class="page-scroll" href="/class/list">
+                                Classes
+                            </a>
+                    @endif
                     @if (Auth::check())
                         <li><a class="page-scroll" href="/profile">
                                 {{ Auth::user()->first_name . " " . Auth::user()->last_name }}
